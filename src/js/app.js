@@ -1,5 +1,6 @@
-import menuTemplate from './template/menu.hbs';
-
+import menuTemplate from '../template/menu.hbs';
+import menuDate from './menu.json';
+console.log(menuTemplate(menuDate[0]));
 const markup = menuTemplate({
     "id": "XWaQXcbk0",
     "name": "Картофель, запеченный в мундире",
