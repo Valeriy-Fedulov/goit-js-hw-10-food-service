@@ -1,11 +1,7 @@
 import menuTemplate from '../template/menu.hbs';
 import menuData from './menu.json';
 
-const bodyRef = document.querySelector('body');
-const menuMarkup = createMenuMarkup();
+const menuRef = document.querySelector('.js-menu');
+const menuMarkup = menuTemplate(menuData);
 
-function createMenuMarkup() {
-    return menuData.map(menuTemplate).join('');
-}
-console.log(JSON.parse(<div></div>));
-bodyRef.append(menuMarkup);
+menuRef.insertAdjacentHTML('afterbegin', menuMarkup);
